@@ -1,0 +1,35 @@
+set nocompatible
+set ruler
+set showmode
+set textwidth=80
+set showmatch
+set ignorecase
+set tabstop=3 
+set autoindent
+set autowrite
+
+syntax on
+
+
+" uncomment the line below if you use gvim in windows
+" and want to use ctrl-v instead of ctrl-q to invoke
+" visual block mode
+
+"unmap <C-V>
+
+ab teh the
+ab fro for
+
+
+" press gi followed by a character will insert that character at cursor
+map gi i<space><esc>r
+
+
+" these two maps enable you to press space to move cursor down a screen,
+" and press backspace up a screen.
+map <space> <c-f>
+map <backspace> <c-b>
+
+" You can use - to jump between windows
+
+map - <c-w>w 

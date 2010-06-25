@@ -1,0 +1,7 @@
+run "echo TODO > README"
+
+git :init
+
+
+
+git :add => ".", :commit => "-m 'initial commmit'"
