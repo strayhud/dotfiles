@@ -1,13 +1,13 @@
 h1. dotfiles
 
-This repo is a clone of Todd Werth's at http://github.com/twerth.   It has a lot of useful scripts and config files for VIM, Bash, and a few other things.
+This repo is a clone of Todd Werth's at http://github.com/twerth.   It has a lot of useful scripts and config files for VIM, Bash, and a several other things.
 
-I made a few modications for my own purposes.
+I made a few modications for my own purposes, but all credit goes to Todd for some excellent tips, tricks, and config settings.
 
 
 h2. File and directory structure
 
-All command-line files are stored in a folder (~/config), and then linked accordingly to (.) dot files in my home directory to keep them organized, protected, and manageble.   Files are stored without the . (i.e., 'gitignore' rather than '.gitignore') and then linked with a dot from the  home directory. 
+All command-line files are stored in a folder (~/config), and then linked accordingly to (.) dot files in my home directory to keep them organized, protected, and manageble.   Files are stored without the dot (i.e., 'gitignore' rather than '.gitignore') and then linked with a dot from the  home directory. 
 
 Following is the directory structure:
 
@@ -21,4 +21,4 @@ Following is the directory structure:
 
 h2. More information
 
-"InfiniteRed":http://blog.infinitered.com/entries/show/9
+Please see Todd's blog for more background and info at "InfiniteRed":http://blog.infinitered.com/entries/show/9
