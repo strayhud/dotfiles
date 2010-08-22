@@ -177,7 +177,7 @@ gns(){ # Case insensitive, excluding svn folders
 }
 alias f='find . -iname'
 gfind(){
-  find . -name "$1" -exec grep -H "$2" {} \;
+  find . -name "$1" -exec grep -Hn "$2" {} \;
 }
 
 # Misc
