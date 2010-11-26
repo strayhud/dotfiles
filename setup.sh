@@ -4,22 +4,20 @@
 # run from the root directory with ~/config/setup.sh
 
 install_file() {
-  local f=".$1"
-
-  if [ -e "$f" ] 
+  if [ -e "$2" ] 
   then
-    echo "Moving $f to ~/config/bak"
-    mv $f config/bak
+    echo "Moving $2 to ~/config/bak"
+    mv $2 config/bak
   fi
-  echo "Linking ~/config/etc/$1 $f"
-  ln -s config/etc/$1 $f
+  echo "Linking ~/$1 $2"
+  ln -s $1 $2
 }
 
 # List of files to backup and link
-install_file bash_profile
-install_file bashrc
-install_file gvimrc
-install_file vimrc
-install_file vim
+install_file config/etc/bash_profile .bash_profile
+install_file config/etc/bashrc .bashrc
+install_file config/etc/vim/gvimrc .gvimrc
+install_file config/etc/vim/vimrc .vimrc
+install_file config/etc/vim .vim
 
 
