@@ -34,10 +34,11 @@ run "rm public/index.html"
 run "rm public/favicon.ico"
 run "rm public/robots.txt"
 run "rm public/images/rails.png"
-run "rm -f public/javascripts/*"
+#run "rm -f public/javascripts/*"
   
 # get jquery and plugins
-#run "curl -L http://code.jquery.com/jquery-1.4.2.min.js > public/javascripts/jquery.js"
+run "curl -L http://code.jquery.com/jquery-1.4.2.min.js > public/javascripts/jquery.js"
+run "curl -L http://github.com/rails/jquery-ujs/raw/master/src/rails.js > public/javascripts/rails.js"
 #run "curl -L http://jqueryjs.googlecode.com/svn/trunk/plugins/form/jquery.form.js > public/javascripts/jquery.form.js"
 #run "curl -L http://jqueryjs.googlecode.com/svn/trunk/plugins/methods/date.js > public/javascripts/date.js"
 #run "curl -L http://www.kelvinluck.com/assets/jquery/datePicker/v2/demo/scripts/jquery.datePicker.js > public/javascripts/jquery.datePicker.js"
@@ -56,20 +57,27 @@ run "rm Gemfile"
 file 'Gemfile', <<-FILE
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
-gem 'mysql', '2.8.1'
+gem 'rails'
+gem 'mysql'
 
 group :development do
-  gem 'rspec-rails', '2.0.0.beta.22'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec', '2.0.0.beta.22'
+  gem 'rspec'
   gem 'webrat'
+end
+
+group :cucumber do
+  gem 'cucumber-rails'
+  gem 'capybara'
 end
 
 FILE
 run "bundle install"
+run "rails generate cucumber:install"
+run "rails generate rspec:install"
 
 # Copy database.yml for distribution use
 run "rm config/database.yml"
@@ -114,6 +122,13 @@ file 'config/routes.rb', <<-FILE
 
 end
 FILE
+
+# jquery_setup.rb
+file 'config/initializers/jquery_setup.rb', <<-FILE
+#{app_name}::Application.config.action_view.javascript_expansions[:defaults] = ['jquery', 'rails']
+end
+FILE
+
 
 # Set up .gitignore files
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"

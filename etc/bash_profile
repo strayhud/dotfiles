@@ -83,3 +83,8 @@ echo -ne "Server time is: "; date
 # in this order:
 #     bashrc
 #     .bashrc
+
+
+# Following should be the last line in this file:
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
