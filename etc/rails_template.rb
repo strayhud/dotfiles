@@ -126,7 +126,6 @@ FILE
 # jquery_setup.rb
 file 'config/initializers/jquery_setup.rb', <<-FILE
 #{app_name}::Application.config.action_view.javascript_expansions[:defaults] = ['jquery', 'rails']
-end
 FILE
 
 
