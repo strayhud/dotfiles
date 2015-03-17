@@ -1,9 +1,6 @@
 h1. dotfiles
 
-This repo is a clone of Todd Werth's at http://github.com/twerth.   It has a lot of useful scripts and config files for VIM, Bash, and a several other things.
-
-I made a few modications for my own purposes, but all credit goes to Todd for some excellent tips, tricks, and config settings.
-
+Useful scripts and config files for VIM, Bash, and a several other things.
 
 h2. File and directory structure
 
