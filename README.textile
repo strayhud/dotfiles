@@ -1,6 +1,6 @@
 h1. dotfiles
 
-Useful scripts and config files for VIM, Bash, and a several other things.
+Useful scripts and config files for VIM, Bash, and a several other things.   Makes setting up a new *nix based environment quick, easy, and familiar.
 
 h2. File and directory structure
 
