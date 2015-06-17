@@ -19,5 +19,5 @@ install_file config/etc/bashrc .bashrc
 install_file config/etc/vim/gvimrc .gvimrc
 install_file config/etc/vim/vimrc .vimrc
 install_file config/etc/vim .vim
-
+mv dotfiles config
 
