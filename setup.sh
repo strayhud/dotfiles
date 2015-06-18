@@ -6,7 +6,7 @@
 install_file() {
   if [ -e "$2" ] 
   then
-    echo "Moving $2 to ~/dotfiles/bak"
+    echo "Moving $2 to ~/dotfiles/$2.bak"
     mv $2 dotfiles/$2.bak
   fi
   echo "Linking ~/$1 $2"
